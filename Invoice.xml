@@ -1,0 +1,335 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdf>
+<head>
+    <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+    <#if .locale == "zh_CN">
+        <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+    <#elseif .locale == "zh_TW">
+        <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+    <#elseif .locale == "ja_JP">
+        <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+    <#elseif .locale == "ko_KR">
+        <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+    <#elseif .locale == "th_TH">
+        <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+    </#if>
+    <macrolist>
+        <macro id="nlheader">
+            <table class="header" style="width: 100%;" border="0">
+                <tr>
+                    <td colspan="15" align="left">
+                        <#if subsidiary.logo?length != 0>
+                            <img src="${subsidiary.logo@url}" style="float: left; margin: 0px; width: 120px; height: 50px; margin-bottom:10px" />
+                        </#if>
+                    </td>
+                    <td colspan="47">&nbsp;</td>
+                    <td colspan="18" align="right" valign="middle"><b><span class="title" style="text-transform:uppercase;">${record@title}</span></b></td>
+                </tr>
+                <tr>
+                    <td colspan="20" style="line-height:16px; font-size:9pt; font-weight:bold;">${subsidiary.mainaddress_text}</td>
+                    <td colspan="20">&nbsp;</td>
+                    <td colspan="40">
+                        <#if record.trandate?has_content>
+                            <#assign inv_trandate = record.trandate?string.long>
+                        <#else>
+                            <#assign inv_trandate = "">
+                        </#if>
+                         <table width="100%">
+                            <tbody>
+                            <tr>
+                                <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">Invoice Number&nbsp;&nbsp;</td>
+                                <td colspan="20" align="left" border="1" style="background-color:#ECF1E0; padding:3px; border-bottom:0px; font-size:8pt;"><b>${record.tranid}</b></td>
+                            </tr>
+                            <tr>
+                                <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">Invoice Date&nbsp;&nbsp;</td>
+                                <td colspan="20" align="left" border="1" style="background-color:#ECF1E0; padding:3px; border-bottom:0px; font-size:8pt;">${inv_trandate}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">Payment Terms&nbsp;&nbsp;</td>
+                                <td colspan="20" align="left" border="1" style="background-color:#ECF1E0; padding:3px; border-bottom:0px; font-size:8pt;">${record.terms}</td>
+                            </tr>
+                            <tr>
+                                <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">Sirion Project Number&nbsp;&nbsp;</td>
+                                <td colspan="20" align="left" border="1" style="background-color:#ECF1E0; padding:3px; font-size:8pt;">${record.custbody_project_number}</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="20">
+                        <table width="100%">
+                            <tr>
+                                <th colspan="20" border="1" style="background-color: #D9E4BF; border-bottom:0px; padding:3px; font-size:9pt; text-transform:uppercase;">
+                                    <!-- <b>${record.billaddress@label}</b> -->
+                                    <b>INVOICE TO</b>
+                                </th>
+                            </tr>
+                            <tr>
+                                <td colspan="20" border="1" style="padding:3px; font-size:8pt;"><b>${record.billaddress}</b></td>
+                            </tr>
+                        </table>
+                    </td>
+                    <td colspan="20">&nbsp;</td>
+                    <td colspan="40">
+                    <#if record.custbody_inv_startdate?has_content || record.custbody_inv_enddate?has_content>
+                        <#assign inv_startDate = record.custbody_inv_startdate?string("d MMM yyyy")>
+                        <#assign inv_endDate = record.custbody_inv_enddate?string("d MMM yyyy")>
+                    <#else>
+                        <#assign inv_startDate = "">
+                        <#assign inv_endDate = "">
+                    </#if>
+
+                         <table width="100%">
+                            <tbody>
+                                <tr>
+                                    <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">Invoice Period&nbsp;&nbsp;</td>
+                                    <td colspan="20" align="center" border="1" style="background-color:#ECF1E0; padding:5px; border-bottom:0px; font-size:8pt;">${inv_startDate} - ${inv_endDate}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt;">${record.custbody_project_name@label}&nbsp;&nbsp;</td>
+                                    <td colspan="20" align="center" border="1" style="background-color:#ECF1E0; padding:5px; border-bottom:0px; font-size:8pt;">${record.custbody_project_name}</td>
+                                </tr>
+                                <tr>
+                                    <td colspan="20" align="right" class="invoice-cl-1" valign="middle" style="font-size:9pt; text-transform:normal;">Client PO Number&nbsp;&nbsp;</td>
+                                    <td colspan="20" align="center" border="1" style="background-color:#ECF1E0; padding:5px; font-size:8pt;">${record.otherrefnum}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td colspan="80"><p style="font-size:8pt; line-height:16px; letter-spacing:1px">
+                        ${record.custbody_ms_wording} <br /> ${record.custbody_sow_wording}
+                    </p></td>
+                </tr>
+            </table>
+        </macro>
+        <macro id="nlfooter">
+            <table class="footer" style="width: 100%;">
+                <tr>
+                    <td><barcode codetype="code128" showtext="true" value="${record.tranid}"/></td>
+                    <td align="right"><pagenumber/> of <totalpages/></td>
+                </tr>
+            </table>
+        </macro>
+    </macrolist>
+    <style type="text/css">* {
+        <#if .locale == "zh_CN">
+            font-family: NotoSans, NotoSansCJKsc, sans-serif;
+        <#elseif .locale == "zh_TW">
+            font-family: NotoSans, NotoSansCJKtc, sans-serif;
+        <#elseif .locale == "ja_JP">
+            font-family: NotoSans, NotoSansCJKjp, sans-serif;
+        <#elseif .locale == "ko_KR">
+            font-family: NotoSans, NotoSansCJKkr, sans-serif;
+        <#elseif .locale == "th_TH">
+            font-family: NotoSans, NotoSansThai, sans-serif;
+        <#else>
+            font-family: NotoSans, sans-serif;
+        </#if>
+        }
+        table {
+            font-size: 9pt;
+            table-layout: fixed;
+            table-layout: fixed; width: 100%; border-collapse: collapse;
+        }
+        th { font-weight: bold; font-size: 8pt; vertical-align: middle; color: #444444; }
+        td { border-collapse: collapse; }
+
+        .invoice-cl-1 {
+            text-transform:uppercase;
+            font-size:8pt;
+            font-style:italic;
+        }
+        /**GRID GUIDE**/
+        .showGrid{
+            width: 100%;
+            position:absolute;
+            top: 0;
+            left:0;
+        }
+        .showGrid tr td{
+            height: 1020px;
+        }
+        .showGrid { border-collapse: collapse; }
+        .showGrid tr td { padding: 0; border: 1px solid #afeeee; } /*d3d3d3*/
+        /***************/
+
+        .tbl-section1-cl-inner-tbl{
+            margin:0;
+            padding: 0px;
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th {
+            font-weight: bold;
+            font-size: 8pt;
+            vertical-align: middle;
+            padding: 5px 6px 3px;
+            background-color: #e3e3e3;
+            color: #333333;
+        }
+        td {
+            padding: 4px 6px;
+        }
+        td p {text-align:left }
+        b {
+            font-weight: bold;
+            color: #333333;
+        }
+        table.header td {
+            padding: 0px;
+            font-size: 10pt;
+        }
+        table.footer td {
+            padding: 0px;
+            font-size: 8pt;
+        }
+        table.itemtable th {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        table.body td {
+            padding-top: 2px;
+        }
+        table.total {
+            page-break-inside: avoid;
+        }
+        tr.totalrow {
+            background-color: #e3e3e3;
+            line-height: 200%;
+        }
+        td.totalboxtop {
+            font-size: 12pt;
+            background-color: #e3e3e3;
+        }
+        td.addressheader {
+            font-size: 8pt;
+            padding-top: 6px;
+            padding-bottom: 2px;
+        }
+        td.address {
+            padding-top: 0px;
+        }
+        td.totalboxmid {
+            font-size: 28pt;
+            padding-top: 20px;
+            background-color: #e3e3e3;
+        }
+        td.totalboxbot {
+            background-color: #e3e3e3;
+            font-weight: bold;
+        }
+        span.title {
+            font-size: 23pt;
+        }
+        span.number {
+            font-size: 16pt;
+        }
+        span.itemname {
+            font-weight: bold;
+            line-height: 150%;
+        }
+        hr {
+            width: 100%;
+            color: #d3d3d3;
+            background-color: #d3d3d3;
+            height: 1px;
+        }
+        .list-header-col{
+            background-color: #D9E4BF; border-bottom:0px; border-left:0px; padding:3px; font-size:9pt; text-transform:uppercase;
+        }
+    </style>
+</head>
+<body header="nlheader" header-height="28%" footer="nlfooter" footer-height="20pt" padding="0.5in 0.5in 0.5in 0.5in" size="Letter">
+    <#if record.item?has_content>
+        <table class="itemtable" style="width: 100%; margin-top: 10px;">
+            <!-- start items -->
+            <#assign total_qty = 0>
+            <#assign total_months = 0>
+
+            <#list record.item as item>
+                <#if item_index==0>
+                <thead>
+                    <tr>
+                        <th colspan="30" align="center" border="1" style="background-color: #D9E4BF; padding:3px; font-size:9pt; text-transform:uppercase;">${item.description@label}</th>
+                        <th colspan="15" align="center" border="1" style="background-color: #D9E4BF;  padding:3px; font-size:9pt; text-transform:uppercase; border-left:0px;">User/Qty</th>
+                        <th colspan="15" align="center" border="1" style="background-color: #D9E4BF;  padding:3px; font-size:9pt; text-transform:uppercase; border-left:0px;">Months</th>
+                        <th colspan="20"  align="center" border="1" style="background-color: #D9E4BF; padding:3px; font-size:9pt; text-transform:uppercase; border-left:0px;">AMOUNT (${record.currency})</th>
+                    </tr>
+                </thead>
+                </#if>
+                <tr>
+                    <td colspan="30" border="1" style="border-top: 0px; font-size:8pt;">${item.description}</td>
+                    <td colspan="15" border="1" valign="middle" align="right" style="border-left:0px; border-top: 0px; font-size:8pt;">${item.custcol_user_qty}</td>
+                    <td colspan="15" border="1" valign="middle" align="right" style="border-left:0px; border-top: 0px; font-size: 8pt;">${item.custcol_duration_months}</td>
+                    <td colspan="20" border="1" valign="middle" align="right" style="border-left:0px; border-top: 0px; font-size: 8pt;">${item.grossamt}</td>
+                </tr>
+
+                <#assign total_qty = total_qty + item.custcol_user_qty>
+                <#assign total_months = total_months + item.custcol_duration_months>
+            </#list>
+            <!-- end items -->
+
+            <tr>
+                <td colspan="30">&nbsp;</td>
+                <td colspan="15" align="right" valign="middle" border="1" style=" font-size:8pt; background-color: #D9E4BF; border-top: 0px;">${total_qty}</td>
+                <td colspan="15" align="right" valign="middle" border="1" style="font-size:8pt; background-color: #D9E4BF; border-top: 0px; border-left:0px;">${total_months}</td>
+                <td colspan="20" align="right" valign="middle" border="1" style="font-size:8pt; background-color: #D9E4BF; border-top: 0px; border-left:0px;">${record.subtotal}</td>
+            </tr>
+
+            <tr>
+                <td colspan="80">&nbsp;</td>
+            </tr>
+            <tr>
+                <td colspan="45">&nbsp;</td>
+                <td colspan="15" align="center" style="font-size:8pt;"><b>${record.total@label?upper_case} DUE IN (${record.currency})</b></td>
+                <td colspan="20" align="right" border="1" style="font-size:8pt; background-color: #D9E4BF;">${record.total}</td>
+            </tr>
+        </table>
+    </#if>
+    <#if record.duedate?has_content>
+        <#assign inv_duedate = record.duedate?string.long>
+    <#else>
+        <#assign inv_duedate ="">
+    </#if>
+     <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td colspan="50" valign="middle"><p style="font-size:7pt; letter-spacing: 0.5pt; font-weight:bold">The DUE DATE of this invoice as per the Agreement terms is: </p></td>
+            <td align="center" valign="middle" colspan="30" style="background-color:#FFFE38;" border="1"><b>${inv_duedate}</b></td>
+        </tr>
+    </table>
+
+    <table border="1" class="cl-payment-details" style="width: 100%; margin-top: 20px; padding:5px;">
+        <tr>
+            <td><b>Remit Payment Via Wire Transfer As Follows:</b></td>
+        </tr>
+        <tr>
+            <td align="left">${record.custbody_payment_details_information}</td>
+        </tr>
+    </table>
+
+    <table style="width: 100%; margin-top: 10px;">
+        <tr>
+            <td colspan="80" align="center"><p style="font-size:8.5pt"><b>If you have any questions about this invoice, please contact</b></p></td>
+        </tr>
+        <tr>
+            <td colspan="80" align="center"><p style="font-size:8.5pt"><b>"${companyInformation.email}"</b></p></td>
+        </tr>
+        <tr>
+            <td colspan="80" align="center"><p style="font-size:8.5pt"><b><i>Thank You For Your Business!</i></b></p></td>
+        </tr>
+    </table>
+</body>
+</pdf>

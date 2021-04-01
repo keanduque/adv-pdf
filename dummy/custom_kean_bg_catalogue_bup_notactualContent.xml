@@ -1,0 +1,303 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdfset>
+    <pdf>
+        <head>
+            <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+            <#if .locale == "zh_CN">
+                <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+            <#elseif .locale == "zh_TW">
+                <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+            <#elseif .locale == "ja_JP">
+                <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+            <#elseif .locale == "ko_KR">
+                <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+            <#elseif .locale == "th_TH">
+                <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+            </#if>
+            <macrolist>
+                <macro id="nlheader">
+
+                </macro>
+                <macro id="nlheader_choco">
+
+                </macro>
+                <macro id="nlheader_pasta">
+                    <table class="header" style="width: 100%;" border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td colspan="80" style="background-color:yellow" align="center" valign="middle" height="120">
+                                <#if subsidiary.logo?length != 0>
+                                    <img src="${subsidiary.logo@url}" style="width: 120px; height: 50px; margin-bottom:15px" />
+                                </#if>
+                            </td>
+                        </tr>
+                    </table>
+                </macro>
+              <macro id="nlheader_index">
+                    <table style="width:100%;" border="1">
+                        <tr>
+                            <td colspan="80" style="background-color:red" align="center" valign="middle" height="10">
+                            <b color="white">INDEX</b>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="catalogue-bg-index" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top:22px">
+                        <tr><td>
+                            <table class="div-index-page" border="1" style="border-bottom:none; border-right:none">
+                                <tr>
+                                    <th colspan="28" align="center" class="border-right-index" valign="middle">ITEM DESCRIPTION</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">UOM</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">PRICE</th>
+                                    <th colspan="4"  align="center" style="border-bottom: 1px solid gray;" valign="middle">PAGE</th>
+                                </tr>
+                                <!--<#assign counter=0>-->
+
+                                <!-- <#list 1..130 as x> -->
+
+                                <!--<#if counter == 65> -->
+                                </table>
+                            </td>
+                            <td><table class="div-index-page" border="1"  style="border-bottom:none; ">
+                                <tr>
+                                    <th colspan="28" align="center" class="border-right-index" valign="middle">ITEM DESCRIPTION</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">UOM</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">PRICE</th>
+                                    <th colspan="4"  align="center" style="border-bottom: 1px solid gray;" valign="middle">PAGE</th>
+                                </tr>
+                                <!--<#assign counter=0>-->
+
+                                <!--</#if>-->
+                                    <tr>
+                                        <td colspan="28" height="10" class="border-right-index item-name" color="red" valign="middle">&nbsp;</td>
+                                        <td colspan="4" class="border-right-index uom" valign="middle">&nbsp;</td>
+                                        <td colspan="4" class="border-right-index price" valign="middle">&nbsp;</td>
+                                        <td colspan="4" style="border-bottom:1px solid gray;" class="page" valign="middle">&nbsp;</td>
+                                    </tr>
+                                <!--<#assign counter++>-->
+
+                                <!-- </#list> -->
+                            </table>
+                        </td></tr>
+                    </table>
+                </macro>
+
+                <macro id="nlfooter">
+                    <table class="footer" style="width: 100%;">
+                        <tr>
+                            <td colspan="20"></td>
+                            <td colspan="10" align="center" valign="middle">
+                              <#if subsidiary.logo?length != 0>
+                                <img src="${subsidiary.logo@url}" style="width: 60px; height: 30px;" />
+                                </#if>
+                            </td>
+                            <td colspan="50" align="left" valign="middle">
+                                <span><i>All Prices are subject to change without prior notice</i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td colspan="10" align="left"><pagenumber/></td> -->
+                            <td colspan="10" align="left"><span class="page-number-holder">1</span></td>
+                            <td colspan="70"></td>
+                        </tr>
+                    </table>
+                </macro>
+            </macrolist>
+            <style type="text/css">
+                * {
+                <#if .locale == "zh_CN">
+                    font-family: NotoSans, NotoSansCJKsc, sans-serif;
+                <#elseif .locale == "zh_TW">
+                    font-family: NotoSans, NotoSansCJKtc, sans-serif;
+                <#elseif .locale == "ja_JP">
+                    font-family: NotoSans, NotoSansCJKjp, sans-serif;
+                <#elseif .locale == "ko_KR">
+                    font-family: NotoSans, NotoSansCJKkr, sans-serif;
+                <#elseif .locale == "th_TH">
+                    font-family: NotoSans, NotoSansThai, sans-serif;
+                <#else>
+                    font-family: NotoSans, sans-serif;
+                </#if>
+                }
+            </style>
+            <link type="stylesheet" src="https://5764979-sb1.app.netsuite.com/core/media/media.nl?id=11195&amp;c=5764979_SB1&amp;h=b314d231593d5a9884f3&amp;_xt=.css"/>
+        </head>
+        <body background-color="white"  header="nlheader_index" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+            <#if record.item?has_content>
+                <!-- INDEX is 130 item per page can be listed -->
+
+                <#assign index_page_box_total = 130>
+                <#assign item_length = record.item?size>
+                <#assign index_page = (item_length / index_page_box_total)?ceiling >
+                <#assign item_loop_start = 1 >
+
+                <#if item_length lte index_page_box_total>
+                    <#assign item_loop_end = item_length >
+                <#else>
+                    <#assign item_loop_end = index_page_box_total >
+                </#if>
+
+                <#list 1..index_page as page>
+                    <table border="0" width="100%"  cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <table class="div-index-page" border="0">
+
+                                    <tr>
+                                        <td colspan="40" class="class-header-index" align="center" valign="middle">FROZEN CHEESE</td>
+                                    </tr>
+
+                                <#list item_loop_start..item_loop_end as item_index>
+
+                                    <#if page - 1 != 0>
+                                        <#assign page_condition = page - 1 >
+                                    <#else>
+                                        <#assign page_condition = 1 >
+                                    </#if>
+
+                                    <#if (item_index - 1) % (index_page_box_total / 2) == 0 && item_index != 1 && (item_index - 1) / (index_page_box_total * page_condition) != 1>
+
+                                </table>
+                            </td>
+                            <td>
+                                <table class="div-index-page" border="0">
+                                    <tr>
+                                        <td colspan="40" class="class-header-index" align="center" valign="middle">FROZEN CHEESE</td>
+                                    </tr>
+
+                                    </#if>
+                                    <tr>
+                                        <td colspan="28" height="10" class="border-right-sty-body item-name" valign="middle" align="left" style="padding-left: 5px;">Block Frozen Italian Mozzarella Cheese for PIZZA 1 Kg</td>
+                                        <td colspan="4" class="border-right-sty-body uom" valign="middle" align="center">${item_index} kg</td>
+                                        <td colspan="4" class="border-right-sty-body price" valign="middle" align="center">18.4</td>
+                                        <td colspan="4" style="border-bottom:none" class="page" valign="middle" align="center">${page}</td>
+                                    </tr>
+                                    <#assign item_loop_start = item_index + 1 >
+                                </#list>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <#if (item_loop_start - 1) + index_page_box_total gte item_length>
+                        <#assign item_loop_end = item_length >
+                    <#else>
+                        <#assign item_loop_end = (index_page_box_total)  + (item_loop_start - 1) >
+                    </#if>
+                </#list>
+            </#if>
+        <pbr  background-color="white"  header="nlheader" header-height="" footer="nlfooter" footer-height="2.5%"  pagenumber="1"/>
+                 <div position="relative">
+                    <table border="1" class="top_info" style="position:absolute;top:-15;right:0 ">
+                        <tr>
+                            <td colspan="60"></td>
+                            <td colspan="20" align="right">
+                                <span style="font-size:9pt;">test</span>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+<!--             <table border="0" ellspacing="0" cellpadding="0" height="792">
+                <tr><td> -->
+                    <table class="header" style="width: 100%; margin-bottom:3px" border="1" cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td colspan="80" style="background-color:#4965AF" align="center" valign="middle" height="20">
+                                <b color="white">FROZEN CHEESE</b>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table width="auto" cellspacing="0" cellpadding="0" style="border-top: 1px solid #000; margin-bottom:3px;">
+                        <#assign ctr=0>
+                          <!-- <#list 1..3 as x> -->
+                            <#if ctr % 2 == 0>
+                                <tr width="355px">
+                            </#if>
+                                    <td class="div-catalogue-data-flow" colspan="40"
+                                        style=" border-right: ${((ctr % 2)==0 && (!x?is_last))?string("none", "solid 1px #000")};
+                                                border-bottom: ${((((ctr % 2)==1) && (x?is_last)) && (((ctr % 2)==0) && (x?is_last)))?string("none", "solid 1px #000")};">
+                                        <table border="0" width="355px" style="border-right:${((ctr % 2)==0 && (!x?is_last))?string("none", "solid 1px #000")};">
+                                            <tr>
+                                                <td colspan="40" align="center">
+                                                    <p style="text-align:center; font-weight:bold">Block Frozen Italian Mozzarella Cheese for PIZZA 1 Kg</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="13" valign="middle"></td>
+                                                <td colspan="17"><span class="s-bold">Price: 18.4 / Bag</span></td>
+                                                <td colspan="10">
+                                                    <span>Qty/Ctn: 2</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="13" rowspan="2" valign="top" align="center">
+                                                    <img width="80" height="80" style="border-color:1px solid red;" src="${subsidiary.logo@url}" />
+                                                </td>
+                                                <td colspan="27" height="25" >
+                                                    <p class="s-bold">
+                                                    Cost per Kg 6.13 SGD<br />
+                                                    Cost per pc 1.53 SGD<br />
+                                                    Cost per portion 0.74 SGD
+                                                    </p>
+                                                </td>
+                                            </tr>
+                                            <tr height="75">
+                                                <td colspan="27" valign="top" >
+<p class="format-parag-content">
+-Intense Taste with some scamorza Taste
+-For Pizza &amp; All Preparations
+-White Color
+-In bag
+-35% Mozzarella 25% Red Cheddar
+-20% Emmental 20% Goya Cheese
+</p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="13" rowspan="3" align="center" valign="bottom">
+                                                    <span class="bottom-code">Code: FC01.01.01</span>
+                                                </td>
+                                                <td colspan="27" align="right" height="18">
+                                                    <table border="0" style="width:auto; float: right;">
+                                                        <tr>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                            <td align="right" class="bottom-marker">
+                                                                <img width="18" height="18" src="${subsidiary.logo@url}" /></td>
+                                                        </tr>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                            <#if ctr % 2 == 1 || x?is_last >
+                                </tr>
+                            </#if>
+                            <#assign ctr++>
+                        <!-- </#list> -->
+                    </table>
+<!--                 </td></tr>
+            </table>
+            <div position="relative">
+                <table class="pagination" style="position:absolute;top:10">
+                    <tr>
+                        <td colspan="10" align="left"><span style="font-size:9pt; color:red">1</span></td>
+                        <td colspan="70"></td>
+                    </tr>
+                </table>
+            </div> -->
+        </body>
+    </pdf>
+</pdfset>

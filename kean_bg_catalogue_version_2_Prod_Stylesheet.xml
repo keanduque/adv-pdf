@@ -1,0 +1,647 @@
+<?xml version="1.0"?><!DOCTYPE pdf PUBLIC "-//big.faceless.org//report" "report-1.1.dtd">
+<pdfset>
+    <!-- START : FRONT COVER PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._1?has_content>
+                <body background-image="${config.custrecord_ps_cat_front_page_img?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : FRONT COVER PAGE -->
+    <!--*************************************************************-->
+    <!-- START : FRONT PAGE 2 COVER PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._20?has_content>
+                <body background-image="${config.custrecord_ps_cat_front_page_img2?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : FRONT PAGE 2 COVER PAGE -->
+
+    <!-- START : FRONT PAGE 3 COVER PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._21?has_content>
+                <body background-image="${config.custrecord_ps_cat_front_page_img3?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : FRONT PAGE 3 COVER PAGE -->
+    <!--*************************************************************-->
+    <!-- START : DELIVERY PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._4?has_content>
+                <body background-image="${config.custrecord_ps_cat_delivery_schedule_img?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : DELIVERY PAGE -->
+    <!-- START : TERMS & CONDITION PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._3?has_content>
+                <body background-image="${config.custrecord_ps_cat_t_and_c_img?html}" background-image-dpi="77" background-image-position="center middle" header="none" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : TERMS & CONDITION PAGE -->
+
+    <!--*************************************************************-->
+    <!-- START : Additional Page Img 1 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._5?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img1?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 1 -->
+    <!-- START : Additional Page Img 2 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._6?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img2?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 2 -->
+    <!-- START : Additional Page Img 3 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._7?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img3?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 3 -->
+    <!-- START : Additional Page Img 4 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._8?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img4?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 4 -->
+    <!-- START : Additional Page Img 5 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._9?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img5?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 5 -->
+    <!-- START : Additional Page Img 6 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._10?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img6?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 6 -->
+    <!-- START : Additional Page Img 7 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._11?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img7?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 7 -->
+    <!-- START : Additional Page Img 8 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._12?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img8?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 8 -->
+    <!-- START : Additional Page Img 9 -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._13?has_content>
+                <body background-image="${config.custrecord_ps_cat_add_page_img9?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : Additional Page Img 9 -->
+    <!--*************************************************************-->
+
+
+    <#assign total_page = 0 >
+    <!--Function for Sum-->
+    <#function mysum nums...>
+        <#local sum = 0>
+        <#list nums as num>
+            <#local sum += num>
+        </#list>
+        <#if nums?size != 0>
+            <#return sum>
+        </#if>
+    </#function>
+    <!-- START : PDF INDEX PAGE-->
+    <pdf>
+        <head>
+            <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+            <#if .locale == "zh_CN">
+                <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+            <#elseif .locale == "zh_TW">
+                <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+            <#elseif .locale == "ja_JP">
+                <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+            <#elseif .locale == "ko_KR">
+                <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+            <#elseif .locale == "th_TH">
+                <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+            </#if>
+            <macrolist>
+                <macro id="nlheader"></macro>
+                <macro id="nlheader_pasta"></macro>
+                <macro id="nlheader_index">
+                    <table style="width:100%;" border="1">
+                        <tr>
+                            <td colspan="80" style="background-color:red" align="center" valign="middle" height="10">
+                            <b color="white">INDEX</b>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <table class="catalogue-bg-index" border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top:22px">
+                        <tr><td>
+                            <table class="div-index-page" border="1" style="border-bottom:none; border-right:none">
+                                <tr>
+                                    <th colspan="28" align="center" class="border-right-index" valign="middle">ITEM DESCRIPTION</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">UOM</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">PRICE</th>
+                                    <th colspan="4"  align="center" style="border-bottom: 1px solid gray;" valign="middle">PAGE</th>
+                                </tr>
+                                <!--<#assign counter=0>-->
+
+                                <!-- <#list 1..130 as x> -->
+
+                                <!--<#if counter == 65> -->
+                                </table>
+                            </td>
+                            <td><table class="div-index-page" border="1"  style="border-bottom:none; ">
+                                <tr>
+                                    <th colspan="28" align="center" class="border-right-index" valign="middle">ITEM DESCRIPTION</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">UOM</th>
+                                    <th colspan="4"  align="center" class="border-right-index" valign="middle">PRICE</th>
+                                    <th colspan="4"  align="center" style="border-bottom: 1px solid gray;" valign="middle">PAGE</th>
+                                </tr>
+                                <!--<#assign counter=0>-->
+
+                                <!--</#if>-->
+                                    <tr>
+                                        <td colspan="28" height="10" class="border-right-index item-name" color="red" valign="middle">&nbsp;</td>
+                                        <td colspan="4" class="border-right-index uom" valign="middle">&nbsp;</td>
+                                        <td colspan="4" class="border-right-index price" valign="middle">&nbsp;</td>
+                                        <td colspan="4" style="border-bottom:1px solid gray;" class="page" valign="middle">&nbsp;</td>
+                                    </tr>
+                                <!--<#assign counter++>-->
+
+                                <!-- </#list> -->
+                            </table>
+                        </td></tr>
+                    </table>
+                </macro>
+            </macrolist>
+            <style type="text/css">
+                * {
+                <#if .locale == "zh_CN">
+                    font-family: NotoSans, NotoSansCJKsc, sans-serif;
+                <#elseif .locale == "zh_TW">
+                    font-family: NotoSans, NotoSansCJKtc, sans-serif;
+                <#elseif .locale == "ja_JP">
+                    font-family: NotoSans, NotoSansCJKjp, sans-serif;
+                <#elseif .locale == "ko_KR">
+                    font-family: NotoSans, NotoSansCJKkr, sans-serif;
+                <#elseif .locale == "th_TH">
+                    font-family: NotoSans, NotoSansThai, sans-serif;
+                <#else>
+                    font-family: NotoSans, sans-serif;
+                </#if>
+                }
+            </style>
+            <link type="stylesheet" src="https://5764979.app.netsuite.com/core/media/media.nl?id=7269&amp;c=5764979&amp;h=cfc4ae90c4fdf6727d59&amp;_xt=.css"/>
+        </head>
+        <body background-color="white"  header="nlheader_index" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+            <!-- START: ITEM INDEX PAGE -->
+            <#if data?has_content>
+                <!-- INDEX is 130 item per page can be listed -->
+                <#assign index_page_box_total = 130>
+                <#assign item_length = data.item_index?size>
+                <#assign index_page = (item_length / index_page_box_total)?ceiling >
+                <#assign item_loop_start = 1 >
+
+                <#if item_length lte index_page_box_total>
+                    <#assign item_loop_end = item_length >
+                <#else>
+                    <#assign item_loop_end = index_page_box_total >
+                </#if>
+
+                <#list 1..index_page as page>
+                    <table border="0" width="100%"  cellspacing="0" cellpadding="0">
+                        <tr>
+                            <td>
+                                <table class="div-index-page" border="0">
+
+                                    <#list item_loop_start..item_loop_end as item>
+                                        <#assign array_idx = item - 1 >
+                                        <#if data.item_index[array_idx].is_header?has_content>
+                                            <tr>
+                                                <td colspan="40" class="class-header-index" align="center" valign="middle">${data.item_index[array_idx].class_name?html}</td>
+                                            </tr>
+                                        </#if>
+
+                                        <#if page - 1 != 0>
+                                            <#assign page_condition = page - 1 >
+                                        <#else>
+                                            <#assign page_condition = 1 >
+                                        </#if>
+
+                                        <#if (item - 1) % (index_page_box_total / 2) == 0 && item != 1 && (item - 1) / (index_page_box_total * page_condition) != 1>
+
+                                            </table>
+                                            </td>
+                                            <td>
+                                            <table class="div-index-page" border="0">
+                                                <#if data.item_index[array_idx].is_header?has_content>
+                                                    <tr>
+                                                        <td colspan="40" class="class-header-index" align="center" valign="middle">${data.item_index[array_idx].class_name?html}</td>
+                                                    </tr>
+                                                </#if>
+                                        </#if>
+
+                                        <#if !data.item_index[array_idx].is_header?has_content>
+                                            <tr>
+                                                <td colspan="28" height="10" class="border-right-sty-body item-name" valign="middle" align="left" style="padding-left: 5px;">
+                                                    <#assign item_name = data.item_index[array_idx].description>
+                                                    <#assign max_length = 43>
+                                                        <#if item_name?length &lt; max_length>
+                                                            ${item_name?html}
+                                                        <#else>
+                                                            ${item_name?substring(0,max_length)?html} ...
+                                                        </#if>
+                                                </td>
+                                                <td colspan="4" class="border-right-sty-body uom" valign="middle" align="center">${data.item_index[array_idx].uom?html}</td>
+                                                <td colspan="4" class="border-right-sty-body price" valign="middle" align="center">${data.item_index[array_idx].price}</td>
+                                                <td colspan="4" style="border-bottom:none" class="page" valign="middle" align="center">${data.item_index[array_idx].page}</td>
+                                            </tr>
+                                            <#assign total_page = mysum(data.item_index[array_idx].page)>
+
+                                            <#macro totalPage(total_page)>
+                                                ${total_page?number}
+                                            </#macro>
+                                        </#if>
+                                        <#assign item_loop_start = item + 1 >
+                                    </#list>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <#if (item_loop_start - 1) + index_page_box_total gte item_length>
+                        <#assign item_loop_end = item_length >
+                    <#else>
+                        <#assign item_loop_end = (index_page_box_total)  + (item_loop_start - 1) >
+                    </#if>
+
+                </#list>
+            </#if>
+            <!-- END: ITEM INDEX PAGE -->
+        </body>
+    </pdf>
+    <!-- END : PDF INDEX PAGE-->
+
+    <!-- START : PDF CATALOGUE PAGE-->
+    <pdf>
+        <head>
+            <link name="NotoSans" type="font" subtype="truetype" src="${nsfont.NotoSans_Regular}" src-bold="${nsfont.NotoSans_Bold}" src-italic="${nsfont.NotoSans_Italic}" src-bolditalic="${nsfont.NotoSans_BoldItalic}" bytes="2" />
+            <#if .locale == "zh_CN">
+                <link name="NotoSansCJKsc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKsc_Regular}" src-bold="${nsfont.NotoSansCJKsc_Bold}" bytes="2" />
+            <#elseif .locale == "zh_TW">
+                <link name="NotoSansCJKtc" type="font" subtype="opentype" src="${nsfont.NotoSansCJKtc_Regular}" src-bold="${nsfont.NotoSansCJKtc_Bold}" bytes="2" />
+            <#elseif .locale == "ja_JP">
+                <link name="NotoSansCJKjp" type="font" subtype="opentype" src="${nsfont.NotoSansCJKjp_Regular}" src-bold="${nsfont.NotoSansCJKjp_Bold}" bytes="2" />
+            <#elseif .locale == "ko_KR">
+                <link name="NotoSansCJKkr" type="font" subtype="opentype" src="${nsfont.NotoSansCJKkr_Regular}" src-bold="${nsfont.NotoSansCJKkr_Bold}" bytes="2" />
+            <#elseif .locale == "th_TH">
+                <link name="NotoSansThai" type="font" subtype="opentype" src="${nsfont.NotoSansThai_Regular}" src-bold="${nsfont.NotoSansThai_Bold}" bytes="2" />
+            </#if>
+            <macrolist>
+                <macro id="nlheader2">
+                     <div position="relative">
+                        <table border="0" class="top_info" style="position:absolute;top:-12;right:0 ">
+                            <tr>
+                                <td colspan="30"></td>
+                                <td colspan="50" align="right">
+                                    <span style="font-size:7pt;">Attention : ${record.custrecord_gelmax_cf_attentionline}; Version Date : ${record.custrecord_gelmax_cf_versiondate}; No. of Pages: <#call totalPage(total_page)>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </macro>
+                <macro id="nlfooter">
+                    <table class="footer" style="width: 100%;">
+                        <tr>
+                            <td colspan="20"></td>
+                            <td colspan="10" align="center" valign="middle">
+                                <#if config.custrecord_ps_cat_company_logo?has_content>
+                                    <img src="${config.custrecord_ps_cat_company_logo?html}" style="width: 60px; height: 30px;" />
+                                </#if>
+                            </td>
+                            <td colspan="50" align="left" valign="middle">
+                                <span><i>All Prices are subject to change without prior notice</i></span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <!-- <td colspan="10" align="left"><pagenumber/></td> -->
+                            <td colspan="10" align="left">
+                                <#macro pageNumber page>
+                                    ${page}
+                                </#macro>
+                            </td>
+                            <td colspan="70"></td>
+                        </tr>
+                    </table>
+                </macro>
+            </macrolist>
+            <style type="text/css">
+                * {
+                <#if .locale == "zh_CN">
+                    font-family: NotoSans, NotoSansCJKsc, sans-serif;
+                <#elseif .locale == "zh_TW">
+                    font-family: NotoSans, NotoSansCJKtc, sans-serif;
+                <#elseif .locale == "ja_JP">
+                    font-family: NotoSans, NotoSansCJKjp, sans-serif;
+                <#elseif .locale == "ko_KR">
+                    font-family: NotoSans, NotoSansCJKkr, sans-serif;
+                <#elseif .locale == "th_TH">
+                    font-family: NotoSans, NotoSansThai, sans-serif;
+                <#else>
+                    font-family: NotoSans, sans-serif;
+                </#if>
+                }
+            </style>
+            <link type="stylesheet" src="https://5764979.app.netsuite.com/core/media/media.nl?id=7269&amp;c=5764979&amp;h=cfc4ae90c4fdf6727d59&amp;_xt=.css"/>
+        </head>
+        <body background-color="white"  header="nlheader2" header-height="" footer="nlfooter" footer-height="2.5%" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+
+<!--         <pbr  background-color="white"  header="nlheader" header-height="" footer="nlfooter" footer-height="2.5%" /> -->
+            <#if data?has_content>
+                <!--BEGIN PAGE-->
+                <#list data.item_grid.pages as page>
+
+                <table border="0" cellspacing="0" cellpadding="0" height="792">
+                    <tr><td>
+
+                    <!--BEGIN CLASS-->
+                    <#list page.classes as class>
+
+                        <#if class.header_image?has_content>
+                            <#if class.header_image?length != 0>
+                            <table class="header" style="width: 100%;" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td colspan="80" style="background-color:#fdbc22" align="center" valign="middle">
+                                        <img src="${class.header_image?html}" style="width: 667px; height: 166px;" />
+                                    </td>
+                                </tr>
+                            </table>
+                            </#if>
+                        </#if>
+                        <#if class.class_name?has_content>
+
+                            <#assign cheese_type = class.is_cheese_type>
+
+                            <table class="header" style="width: 100%; margin-bottom:3px" border="0" cellspacing="0" cellpadding="0">
+                                <tr>
+                                    <td colspan="80"
+                                        style="background-color:${(cheese_type?has_content)?string("white","#4965AF")};
+                                               border: ${(cheese_type?has_content)?string("1px solid red","none")};" align="center" valign="middle" height="20">
+                                        <b style="color:${(cheese_type?has_content)?string("black","white")};">${class.class_name?html}</b>
+                                    </td>
+                                </tr>
+                            </table>
+                         </#if>
+
+                        <!--END CLASS-->
+
+                        <!--BEGIN IF ITEM-->
+                        <#if class.items?has_content>
+                            <!--BEGIN TABLE ITEM-->
+                            <table width="auto" cellspacing="0" cellpadding="0" style="border-top:1px solid #000000; margin-bottom:3px;">
+                                <#assign ctr=0>
+                                <!--BEGIN LIST ITEM-->
+                                <#list class.items as item>
+
+                                    <#assign show_price_lower_case = record.custrecord_gelmax_cf_showprice?lower_case>
+
+                                    <#assign show_bestseller_lower_case = record.custrecord_gelmax_cf_bestseller?lower_case>
+                                    <#assign show_indent_lower_case = record.custrecord_gelmax_cf_indent?lower_case>
+                                    <#assign show_ondemand_lower_case = record.custrecord_gelmax_cf_ondemand?lower_case>
+
+
+                                    <#if ctr % 2 == 0>
+                                        <tr width="355px">
+                                    </#if>
+                                            <td class="div-catalogue-data-flow" colspan="40"
+                                                style=" border-right: ${((ctr % 2)==0 && (!item?is_last))?string("none", "1px solid #000000")};
+                                                        border-bottom: ${((((ctr % 2)==1) && (item?is_last)) && (((ctr % 2)==0) && (item?is_last)))?string("none", "1px solid #000000")};">
+                                                <table border="0" width="355px" style="border-right:${((ctr % 2)==0 && (!item?is_last))?string("none", "1px solid #000000")};">
+                                                    <tr>
+                                                        <td colspan="40" align="center">
+                                                            <p style="text-align:center; font-weight:bold">${item.displayname?html}</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="13" valign="middle"></td>
+                                                        <td colspan="17">
+                                                            <#if show_price_lower_case == "yes">
+                                                                <span class="s-bold">Price: ${item.price} / ${item.saleunit}</span>
+                                                            </#if>
+                                                        </td>
+                                                        <td colspan="10">
+                                                            <span>Qty/Ctn: ${item.custitem_gelmax_im_cd2?html}</span>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="13" rowspan="2" valign="top" align="center">
+                                                            <#if item.custitem_atlas_item_image?length != 0>
+                                                                <img width="80" height="80" src="${item.custitem_atlas_item_image?html}" style="border:1px solid #efefef" />
+                                                            <#else>
+                                                                <img width="80" height="80" src="${config.custrecord_ps_cat_default_img?html}" style="border:1px solid #efefef" />
+                                                            </#if>
+                                                        </td>
+                                                        <td colspan="27" height="25">
+                                                            <p class="s-bold">
+                                                                <#if item.price_per_kg != "empty">
+                                                                     Price per KG/Litre ${item.price_per_kg} ${data.currency}<br />
+                                                                </#if>
+                                                                <#if item.price_per_piece != "empty">
+                                                                     Price per Pcs ${item.price_per_piece} ${data.currency}<br />
+                                                                </#if>
+                                                                <#if item.price_per_portion != "empty">
+                                                                     Price per portion ${item.price_per_portion} ${data.currency}<br />
+                                                                </#if>
+                                                            </p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr height="75">
+                                                        <td colspan="25" valign="top" >
+                                                            <p class="s-bold2" style="line-height:8pt">
+                                                                <#if show_bestseller_lower_case == "yes">
+                                                                    Best Seller<br />
+                                                                </#if>
+                                                                <#if show_indent_lower_case == "yes">
+                                                                    Indent<br />
+                                                                </#if>
+                                                                <#if show_ondemand_lower_case == "yes">
+                                                                    On Demand
+                                                                </#if>
+                                                            </p>
+<p class="format-parag-content">
+${item.custitem_gelmax_im_cd1?html}
+</p>
+                                                        </td>
+                                                    </tr>
+                                                    <tr >
+                                                        <td colspan="13" rowspan="3" align="center" valign="bottom">
+                                                            <span class="bottom-code">Code: ${item.itemid}</span>
+                                                        </td>
+                                                        <td colspan="27" align="right" height="18" >
+                                                            <table border="0" style="width:auto; float: right;">
+                                                                <tr>
+                                                                    <!--IF Halal-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._1?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_halal_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Vegan-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._2?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_vegan_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Gluten Free-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._3?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_gluten_free_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Goat-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._4?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_goat_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Cow-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._5?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_cow_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Cow Goat Sheep-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._6?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_cow_goat_sheep_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Organic-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._7?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_organic_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                    <!--IF Sheep-->
+                                                                    <#if item.custitem_gelmax_productrestrictiontype._8?has_content>
+                                                                        <td align="right" class="bottom-marker">
+                                                                            <img width="18" height="18" src="${config.custrecord_ps_cat_sheep_img?html}" />
+                                                                        </td>
+                                                                    </#if>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                    <#if ctr % 2 == 1 || item?is_last>
+                                        </tr>
+                                    </#if>
+                                <#assign ctr++ />
+                                </#list>
+                                <!--END ITEM LIST-->
+                            </table>
+                            <!--END TABLE ITEM-->
+                        </#if>
+                        <!--END IF ITEM-->
+                    </#list>
+                    <!--END CLASS-->
+
+                </td></tr>
+                </table>
+                <div position="relative">
+                    <table class="pagination" style="position:absolute;top:10; ">
+                        <tr>
+                            <td colspan="10" align="left">
+                                <span style="font-size:9pt;"><@pageNumber page="${page.page_number}" /></span>
+                            </td>
+                            <td colspan="70"></td>
+                        </tr>
+                    </table>
+                </div>
+                </#list>
+                <!--END PAGE-->
+            </#if>
+        </body>
+    </pdf>
+    <!-- END : PDF CATALOGUE PAGE -->
+
+    <!-- START : BACK COVER PAGE -->
+    <pdf>
+        <#if data?has_content>
+            <#if data.additional_pages._2?has_content>
+                <body background-image="${config.custrecord_ps_cat_back_page_img?html}" background-image-dpi="72" background-image-position="center middle" header="" header-height="3.8%" footer="none" padding="0.18in 0.18in 0.18in 0.18in" size="A4">
+                    &nbsp;
+                </body>
+            </#if>
+        </#if>
+    </pdf>
+    <!-- END : BACK COVER PAGE -->
+</pdfset>

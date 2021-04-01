@@ -1,0 +1,75 @@
+<fieldValidatorList>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_bic</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">35</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_bic</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">35</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_entity_bic</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="validLength">8|11</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_country_code</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">2</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_print_company_name</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">70</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custrecord_2663_entity_iban</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">34</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custpage_eft_custrecord_2663_acct_num</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">34</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+    <fieldValidator>
+        <fieldName>custpage_eft_custrecord_2663_country_code</fieldName>
+        <validatorList>
+            <validator type="len">
+                <param name="maxLength">2</param>
+            </validator>
+        </validatorList>
+    </fieldValidator>
+
+</fieldValidatorList>

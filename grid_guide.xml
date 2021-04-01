@@ -1,0 +1,58 @@
+<style>
+    /**GRID GUIDE**/
+        .showGrid{
+            width: 100%;
+            position:absolute;
+            top: 0;
+            left:0;
+        }
+        .showGrid tr td{
+            height: 1020px;
+        }
+        .showGrid { border-collapse: collapse; }
+        .showGrid tr td { padding: 0; border: 1px solid #afeeee; } /*d3d3d3*/
+        /***************/
+</style>
+
+
+<table class="showGrid">
+    <tr>
+       <td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>1<br />0</td>
+       <td>1<br />1</td><td>1<br />2</td><td>1<br />3</td><td>1<br />4</td><td>1<br />5</td><td>1<br />6</td><td>1<br />7</td><td>1<br />8</td><td>1<br />9</td><td>2<br />0</td>
+       <td>2<br />1</td><td>2<br />2</td><td>2<br />3</td><td>2<br />4</td><td>2<br />5</td><td>2<br />6</td><td>2<br />7</td><td>2<br />8</td><td>2<br />9</td><td>3<br />0</td>
+       <td>3<br />1</td><td>3<br />2</td><td>3<br />3</td><td>3<br />4</td><td>3<br />5</td><td>3<br />6</td><td>3<br />7</td><td>3<br />8</td><td>3<br />9</td><td>4<br />0</td>
+       <td>4<br />1</td><td>4<br />2</td><td>4<br />3</td><td>4<br />4</td><td>4<br />5</td><td>4<br />6</td><td>4<br />7</td><td>4<br />8</td><td>4<br />9</td><td>5<br />0</td>
+       <td>5<br />1</td><td>5<br />2</td><td>5<br />3</td><td>5<br />4</td><td>5<br />5</td><td>5<br />6</td><td>5<br />7</td><td>5<br />8</td><td>5<br />9</td><td>6<br />0</td>
+       <td>6<br />1</td><td>6<br />2</td><td>6<br />3</td><td>6<br />4</td><td>6<br />5</td><td>6<br />6</td><td>6<br />7</td><td>6<br />8</td><td>6<br />9</td><td>7<br />0</td>
+       <td>7<br />1</td><td>7<br />2</td><td>7<br />3</td><td>7<br />4</td><td>7<br />5</td><td>7<br />6</td><td>7<br />7</td><td>7<br />8</td><td>7<br />9</td><td>8<br />0</td>
+    </tr>
+</table>
+
+<table class="showGrid" style="margin-top: 10px;">
+   <tr>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+       <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+   </tr>
+</table>
+
+
+<table class="showGrid">
+  <tr>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+     <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td style="border-right:1px solid #00f">&nbsp;</td>
+  </tr>
+</table>
+
+

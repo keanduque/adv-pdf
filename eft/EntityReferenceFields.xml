@@ -1,0 +1,6 @@
+<refFields type="CITIBANK">
+    <refField id="custrecord_2663_entity_acct_no" label="Account Number" mandatory="true" helptext="Enter the vendor's/employee's/partner's bank account number."/>
+    <refField id="custrecord_2663_entity_acct_name" label="Account Name" mandatory="true" helptext="Enter the vendor's/employee's/partner's bank account name."/>
+    <refField id='custrecord_2663_entity_bic' label='Beneficiary Bank Swift' mandatory='true' />
+    <refField id='custrecord_2663_entity_delivery_method' label='Delivery Method' mandatory='true' />
+</refFields>

@@ -1,0 +1,5 @@
+<refFields type="CITIBANK">
+<refField id='custrecord_2663_acct_num' label='Account Number' mandatory='false' helptext="Identification assigned by an institution. MaxLength:34" />
+<refField id='custrecord_2663_bic' label='BIC' mandatory='true' helptext="MaxLength:11" />
+<refField id='custrecord_2663_country_code' label='Country Code' mandatory='true' helptext="MaxLength:2" />
+</refFields>

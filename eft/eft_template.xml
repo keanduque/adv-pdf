@@ -1,0 +1,103 @@
+<#-- format specific processing -->
+    <#function buildUnstructuredInfo payment>
+        <#assign name = cbank.custrecord_2663_print_company_name>
+        <#assign paymentTrans = transHash[payment.internalid]>
+        <#assign tranId = "">
+        <#if paymentTrans?size == 1>
+            <#assign transaction = paymentTrans[0]>
+            <#assign tranId = transaction.tranid >
+        </#if>
+
+        <#if tranId?has_content>
+            <#assign info = tranId >
+        <#else>
+            <#assign info = "Payment from " + name >
+        </#if>
+        <#return info>
+    </#function>
+
+    <#function convertSEPACharSet text>
+        <#assign value = text>
+        <#assign value = value?replace('&','+')>
+        <#assign value = value?replace('*','.')>
+        <#assign value = value?replace('$','.')>
+        <#assign value = value?replace('%','.')>
+        <#assign value = value?replace('\'',' ')>
+        <#assign value = value?replace('/',' ')>
+        <#assign value = convertToLatinCharSet(value)>
+        <#return value>
+    </#function>
+<#-- cached values -->
+<#assign totalAmount = computeTotalAmount(payments)>
+
+<#-- template building -->
+#OUTPUT START#
+<?xml version="1.0" encoding="UTF-8"?>
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.03" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <CstmrCdtTrfInitn>
+        <GrpHdr>
+            <MsgId>${pfa.id}</MsgId>
+            <CreDtTm>${pfa.custrecord_2663_file_creation_timestamp?date?string("yyyy-MM-dd")}T${pfa.custrecord_2663_file_creation_timestamp?time?string("HH:mm:ss")}</CreDtTm>
+            <NbOfTxs>${payments?size?c}</NbOfTxs>
+            <InitgPty>
+                <Nm>${convertSEPACharSet(cbank.custrecord_2663_legal_name)?upper_case}</Nm>
+            </InitgPty>
+        </GrpHdr>
+        <#list payments as payment>
+            <#assign entity = entities[payment_index]>
+            <#assign ebank = ebanks[payment_index]>
+            <#assign entity = entities[payment_index]>
+            <#assign paymentTrans = transHash[payment.internalid]>
+            <#assign transaction = paymentTrans[payment_index]>
+            <PmtInf>
+                <PmtInfId>${pfa.id}</PmtInfId>
+                <PmtMtd>TRF</PmtMtd>
+
+                <ReqdExctnDt>${pfa.custrecord_2663_process_date?string("yyyy-MM-dd")}</ReqdExctnDt>
+                <Dbtr>
+                    <Nm>${convertSEPACharSet(cbank.custrecord_2663_legal_name)?upper_case}</Nm>
+                    <PstlAdr>
+                        <AdrLine>${setMaxLength(convertSEPACharSet(cbank.custpage_eft_custrecord_2663_bank_address1)?upper_case,70)}</AdrLine>
+                    </PstlAdr>
+                </Dbtr>
+                <DbtrAcct>
+                    <Id>
+                        <Othr>
+                            <Id>${setMaxLength(convertSEPACharSet(cbank.custpage_eft_custrecord_2663_acct_num)?upper_case,34)}</Id>
+                        </Othr>
+                    </Id>
+                </DbtrAcct>
+
+                <CdtTrfTxInf>
+                    <PmtId>
+                        <EndToEndId>${pfa.id}${setMaxLength(convertSEPACharSet(payment.tranid),29)}</EndToEndId>
+                    </PmtId>
+                    <Amt>
+                        <InstdAmt Ccy="${getCurrencySymbol(payment.currency)}">${formatAmount(getAmount(payment),"dec")}</InstdAmt>
+                    </Amt>
+
+                    <#if (pfa.custrecord_2663_process_date?string["yyyy-MM-dd"] == ebank.custrecord__ps_fx_contract_effectivity?string["yyyy-MM-dd"])>
+                        <XchgRateInf>
+                            <CtrctId>${ebank.custrecord_2663_entity_bank_fx_contract}</CtrctId>
+                        </XchgRateInf>
+                    </#if>
+
+                    <Cdtr>
+                        <PstlAdr>
+                            <Ctry>${entity.billcountrycode}</Ctry>
+                        </PstlAdr>
+                    </Cdtr>
+
+                    <RltdRmtInf>
+                        <RmtLctnMtd>EMAL</RmtLctnMtd>
+                        <RmtLctnElctrncAdr>${entity.email}</RmtLctnElctrncAdr>
+                    </RltdRmtInf>
+                    <RmtInf>
+                        <Ustrd><#list paymentTrans as bill>${bill.tranid}<#if bill_has_next>, </#if></#list></Ustrd>
+                    </RmtInf>
+                </CdtTrfTxInf>
+            </PmtInf>
+        </#list>
+    </CstmrCdtTrfInitn>
+</Document><#rt>
+#OUTPUT END#
